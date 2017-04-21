@@ -1,0 +1,142 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+    >postcss-modules (v0.6.4)</a>
+</h1>
+<h4>PostCSS plugin to use CSS Modules everywhere</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.postcss-modules">module postcss-modules</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.postcss-modules.postcss-modules">
+            function <span class="apidocSignatureSpan"></span>postcss-modules
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.postcss-modules.process">
+            function <span class="apidocSignatureSpan">postcss-modules.</span>process
+            <span class="apidocSignatureSpan">(root, opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.postcss-modules" id="apidoc.module.postcss-modules">module postcss-modules</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.postcss-modules.postcss-modules" id="apidoc.element.postcss-modules.postcss-modules">
+        function <span class="apidocSignatureSpan"></span>postcss-modules
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.postcss-modules.process" id="apidoc.element.postcss-modules.process">
+        function <span class="apidocSignatureSpan">postcss-modules.</span>process
+        <span class="apidocSignatureSpan">(root, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">process = function (root, opts) {
+  return postcss([creator(opts)]).process(root, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var fs = require(&#x27;fs&#x27;);
+var posthtml = require(&#x27;posthtml&#x27;);
+var posthtmlCssModules = require(&#x27;posthtml-css-modules&#x27;);
+var template = fs.readFileSync(&#x27;./about.html&#x27;, &#x27;utf8&#x27;);
+
+posthtml([posthtmlCssModules(&#x27;./cssModules.json&#x27;)])
+    .<span class="apidocCodeKeywordSpan">process</span>(template)
+    .then(function (result) {
+        console.log(result.html);
+    });
+```
+(for using other build systems please check [the documentation of PostHTML](https://github.com/posthtml/posthtml/blob/master/README
+.md))
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
